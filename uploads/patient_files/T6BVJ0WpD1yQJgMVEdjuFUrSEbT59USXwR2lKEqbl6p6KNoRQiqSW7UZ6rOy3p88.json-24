@@ -1,0 +1,2007 @@
+{
+	"info": {
+		"_postman_id": "5459edde-26df-4b50-a48f-93f58f720e73",
+		"name": "Medistory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19879539"
+	},
+	"item": [
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "Home",
+					"item": [
+						{
+							"name": "home",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "{{base_url}}/doctor/home"
+							},
+							"response": []
+						},
+						{
+							"name": "Visits",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/visits"
+							},
+							"response": []
+						},
+						{
+							"name": "Leaderboard",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/leaderboard"
+							},
+							"response": []
+						},
+						{
+							"name": "Scan User Data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/user-data-scan/70"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Patient",
+					"item": [
+						{
+							"name": "Doctor PatientIndex",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/doctor/patients?gender=Female&from=2022-09-01&to=2022-09-17",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor",
+										"patients"
+									],
+									"query": [
+										{
+											"key": "gender",
+											"value": "Female"
+										},
+										{
+											"key": "search",
+											"value": "asd",
+											"disabled": true
+										},
+										{
+											"key": "from",
+											"value": "2022-09-01"
+										},
+										{
+											"key": "to",
+											"value": "2022-09-17"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Doctor PatientCreate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "70",
+											"description": "string| required",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "1798754546",
+											"description": "required|numeric",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "seoni",
+											"type": "text"
+										},
+										{
+											"key": "pincode",
+											"value": "12324",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/store"
+							},
+							"response": []
+						},
+						{
+							"name": "Doctor PatientView",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/view/60"
+							},
+							"response": []
+						},
+						{
+							"name": "Doctor PatientUpdate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "parul",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "8787554567",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "gfhfgh",
+											"type": "text"
+										},
+										{
+											"key": "pincode",
+											"value": "2223424",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/update/60"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "Doctor Profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "{{base_url}}/doctor/profile/70"
+							},
+							"response": []
+						},
+						{
+							"name": "Doctor Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "Anjali",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Chourasiya",
+											"type": "text"
+										},
+										{
+											"key": "salutation",
+											"value": "Dr",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "6266554669",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "Female",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "seoni",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": "/C:/Users/Sid pc/Downloads/Sample-jpg-image-200kb.jpg"
+										},
+										{
+											"key": "speciality",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/profile/update"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Referral",
+					"item": [
+						{
+							"name": "ReferralIndex",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/doctor/referral/index?party_name=Anjali&from=2022-09-01&to=2022-09-17",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor",
+										"referral",
+										"index"
+									],
+									"query": [
+										{
+											"key": "party_name",
+											"value": "Anjali"
+										},
+										{
+											"key": "from",
+											"value": "2022-09-01"
+										},
+										{
+											"key": "to",
+											"value": "2022-09-17"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ReferralCreate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "party_name",
+											"value": "HY",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2022-09-08",
+											"description": "somthime|date(y-m-d)",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "200",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/referral/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Referral Update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "party_name",
+											"value": "hy",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "hy",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2022-09-08",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "70",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/referral/update/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Followups",
+					"item": [
+						{
+							"name": "Followup",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/doctor/followup/index?from=2022-09-01&to=2022-09-17&search=2fdg&status=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor",
+										"followup",
+										"index"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "2022-09-01"
+										},
+										{
+											"key": "to",
+											"value": "2022-09-17"
+										},
+										{
+											"key": "search",
+											"value": "2fdg"
+										},
+										{
+											"key": "status",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FollowupCreate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "remark",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2022-09-09",
+											"description": "date(y-m-d)",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "201",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/followup/store"
+							},
+							"response": []
+						},
+						{
+							"name": "FollowupView",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/followup/view/3"
+							},
+							"response": []
+						},
+						{
+							"name": "FollowupEdit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "remark",
+											"value": "Anjali chourasiya 1212",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "2",
+											"description": "0:pen2:attende,ding,1:notattended,3:cancelled",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2022-09-09",
+											"description": "date(y-m-d)",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "70",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/followup/update/6"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Education",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/education/index"
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "degree",
+											"value": "MBBS",
+											"type": "text"
+										},
+										{
+											"key": "college_name",
+											"value": "RGVV",
+											"type": "text"
+										},
+										{
+											"key": "field_study",
+											"value": "hy",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-09-15",
+											"description": "formate('y-m-d)",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2022-09-30",
+											"description": "formate('y-m-d)",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/education/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "degree",
+											"value": "MBBS",
+											"type": "text"
+										},
+										{
+											"key": "college_name",
+											"value": "RGVV",
+											"type": "text"
+										},
+										{
+											"key": "field_study",
+											"value": "anjali",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-09-15",
+											"description": "formate('y-m-d)",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2022-09-30",
+											"description": "formate('y-m-d)",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/education/update/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/education/delete/1"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Experience",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/experience/index"
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Anjali",
+											"type": "text"
+										},
+										{
+											"key": "clinic_name",
+											"value": "Khalsh",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "seoni",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-09-15",
+											"description": "formate('y-m-d)",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2022-09-30",
+											"description": "formate('y-m-d)",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/experience/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Anjali",
+											"type": "text"
+										},
+										{
+											"key": "clinic_name",
+											"value": "MBBS",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "Seoni",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-09-15",
+											"description": "formate('y-m-d)",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2022-09-27",
+											"description": "formate('y-m-d)",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/experience/update/2"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/experience/delete/2"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Scan Patient qr",
+					"item": [
+						{
+							"name": "Patient Document",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/report/patient-report/70"
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Summary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/patient-summary/70"
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Journey",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/patient-journey/70"
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Chart",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/doctor/patient-chart/70"
+							},
+							"response": []
+						},
+						{
+							"name": "Upload ragistration Certificate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file[0]",
+											"type": "file",
+											"src": "/C:/Users/Sid pc/Downloads/Sample-jpg-image-200kb.jpg"
+										},
+										{
+											"key": "file[1]",
+											"type": "file",
+											"src": "/C:/Users/Sid pc/Downloads/images.jpg"
+										}
+									]
+								},
+								"url": "{{base_url}}/doctor/upload-registration-certificate"
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Document Category Type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/upload-document/category-list"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get My Patients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/doctor/get-my-patients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"doctor",
+								"get-my-patients"
+							],
+							"query": [
+								{
+									"key": "gender",
+									"value": "Female",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "2022-09-01",
+									"disabled": true
+								},
+								{
+									"key": "to",
+									"value": "2022-09-30",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Referrals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/doctor/get-my-referrals"
+					},
+					"response": []
+				},
+				{
+					"name": "/get-specilities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/doctor/get-specilities?name=anjali",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"doctor",
+								"get-specilities"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "anjali"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revenue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/doctor/revenue"
+					},
+					"response": []
+				},
+				{
+					"name": "Patient List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/doctor/patient-list"
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor Home Slider",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/doctor/doctor-home-slider"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Clinic Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "clinic_contact_no",
+									"value": "4634654234",
+									"type": "text"
+								},
+								{
+									"key": "name_of_clinic",
+									"value": "AIMS123",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "51",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "seoni",
+									"type": "text"
+								},
+								{
+									"key": "phone_no",
+									"value": "3254878/756",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/doctor/clinic-details/update/69"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Story",
+					"item": [
+						{
+							"name": "Story Index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/story/index"
+							},
+							"response": []
+						},
+						{
+							"name": "Story Update",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "{{base_url}}/patient/update"
+							},
+							"response": []
+						},
+						{
+							"name": "Story organize Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "67",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Anjali",
+											"type": "text"
+										},
+										{
+											"key": "age",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "dob",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "",
+											"description": "(y-m-d)",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/story/organize-request"
+							},
+							"response": []
+						},
+						{
+							"name": "My Summary",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/story/my-summary"
+							},
+							"response": []
+						},
+						{
+							"name": "My Journey",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/story/my-journey"
+							},
+							"response": []
+						},
+						{
+							"name": "My Chart Data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/story/my-chart"
+							},
+							"response": []
+						},
+						{
+							"name": "Blood Report",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/story/blood-report"
+							},
+							"response": []
+						},
+						{
+							"name": "Insight",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/story/insite"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Patient",
+					"item": [
+						{
+							"name": "Home",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/home/slider"
+							},
+							"response": []
+						},
+						{
+							"name": "Patient View",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/view/1"
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Create",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "{{base_url}}/patient/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "Riya Baghel",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "dsfdsf",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "313249873",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "female",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "fdgdfg",
+											"type": "text"
+										},
+										{
+											"key": "pincode",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "",
+											"description": "(y-m-d)",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "51",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/patient/update"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Share",
+					"item": [
+						{
+							"name": "Share Index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/index"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Report",
+					"item": [
+						{
+							"name": "My Report index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/report/my-report"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Health Tips",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/health-tips/index"
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/health-tips/show/5"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/posts/index"
+							},
+							"response": []
+						},
+						{
+							"name": "Post Comments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/post/3/comments"
+							},
+							"response": []
+						},
+						{
+							"name": "Post Like Index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/post/3/likes"
+							},
+							"response": []
+						},
+						{
+							"name": "Store Posts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "hello",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/patient/create/post"
+							},
+							"response": []
+						},
+						{
+							"name": "Store Post Comment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "comment",
+											"value": "hello",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient/create/post-comment?post_id=5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"create",
+										"post-comment"
+									],
+									"query": [
+										{
+											"key": "post_id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Delete",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/delete/post/2"
+							},
+							"response": []
+						},
+						{
+							"name": "Post Comment Delete",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/patient/delete/post-comment/2"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Post Like",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/create/post-like?post_id=3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"create",
+										"post-like"
+									],
+									"query": [
+										{
+											"key": "post_id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Diagnostic Centers",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/diagnostic-centers?state=4008&city=133504&pincode=411041&district=Pune",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"diagnostic-centers"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "4008"
+										},
+										{
+											"key": "city",
+											"value": "133504"
+										},
+										{
+											"key": "pincode",
+											"value": "411041"
+										},
+										{
+											"key": "district",
+											"value": "Pune"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Member",
+					"item": [
+						{
+							"name": "Add Member",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "ankita",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "3265975256",
+											"description": "required|numeric|unique:users,phone",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "siyaBaghel@gmail.com",
+											"description": "required|email|unique:users,email",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "rajpoot",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "female",
+											"type": "text"
+										},
+										{
+											"key": "pincode",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "relation",
+											"value": "sister",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "seoni",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/member/add-member"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Subscription",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/member/subscription-delete/10"
+							},
+							"response": []
+						},
+						{
+							"name": "My Family Members",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/member/my-family-members"
+							},
+							"response": []
+						},
+						{
+							"name": "Login Member User",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/member/member-login/136"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Subscription",
+					"item": [
+						{
+							"name": "get subscription data",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": "{{base_url}}/subscription/get-subscription"
+							},
+							"response": []
+						},
+						{
+							"name": "Buy Subscription",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscription/buy-subscription/2"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Doctor List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/patient/doctor-list?state=4009&city=57795&pincode=56756756",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"patient",
+								"doctor-list"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "4009"
+								},
+								{
+									"key": "city",
+									"value": "57795"
+								},
+								{
+									"key": "pincode",
+									"value": "56756756"
+								},
+								{
+									"key": "district",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my followups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/patient/my-followup"
+					},
+					"response": []
+				},
+				{
+					"name": "Home Second Slider",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/patient/home/second-slider"
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Documents",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file[]",
+									"type": "file",
+									"src": [
+										"/C:/Users/Sid pc/Downloads/images.jpg",
+										"/C:/Users/Sid pc/Downloads/Sample-jpg-image-200kb.jpg"
+									]
+								},
+								{
+									"key": "category_id",
+									"value": "48",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/patient/upload-document"
+					},
+					"response": []
+				},
+				{
+					"name": "Category Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/patient/upload-document/category-list"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctor login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "3698521470",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "{{base_url}}/doctor/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor Verify Otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "6266554658",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "9889\n",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/doctor/verify-otp"
+			},
+			"response": []
+		},
+		{
+			"name": "Patient Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "6548325564",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/patient/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Patient Verify Otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "6548325564",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "6414",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/patient/verify-otp"
+			},
+			"response": []
+		},
+		{
+			"name": "Patient Profile Setup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Anj 70",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "chourasiya",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "anj70@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "seoni",
+							"type": "text"
+						},
+						{
+							"key": "pincode",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2022-09-09",
+							"description": "(y-m-d)",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Female",
+							"description": "male,female,other",
+							"type": "text"
+						},
+						{
+							"key": "progress",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "{{base_url}}/patient/profile-setup/70"
+			},
+			"response": []
+		},
+		{
+			"name": "Primary Doctor Selector",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "doctor_name",
+							"value": "Anjali",
+							"type": "text"
+						},
+						{
+							"key": "phone_no",
+							"value": "234569187",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "mp",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "seoni",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "seoni",
+							"type": "text"
+						},
+						{
+							"key": "pincode",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/patient/doctor-selector/74"
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor Profile Setup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "salutation",
+							"value": "hy",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "ANjali",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "chourasiya",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Anjal0987@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "MALE",
+							"description": "MALE|FEMALE\\OTHER",
+							"type": "text"
+						},
+						{
+							"key": "pincode",
+							"value": "546546",
+							"type": "text"
+						},
+						{
+							"key": "speciality",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "seoni",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/doctor/profile-setup/69"
+			},
+			"response": []
+		},
+		{
+			"name": "Professional Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "speciality",
+							"value": "professional doctor",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/doctor/professional-details/69"
+			},
+			"response": []
+		},
+		{
+			"name": "Doctor Clinic Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "address",
+							"value": "seoni",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "51",
+							"description": "make sure insert the state id",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "30",
+							"description": "make sure insert the city id",
+							"type": "text"
+						},
+						{
+							"key": "clinic_contact_no",
+							"value": "549874987",
+							"type": "text"
+						},
+						{
+							"key": "name_of_clinic",
+							"value": "AIMS",
+							"type": "text"
+						},
+						{
+							"key": "phone_no",
+							"value": "31524984987",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/doctor/clinic-details/69"
+			},
+			"response": []
+		},
+		{
+			"name": "get-states",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/get-states"
+			},
+			"response": []
+		},
+		{
+			"name": "get-cities",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "state_id",
+							"value": "4010",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/get-cities?state_id=3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get-cities"
+					],
+					"query": [
+						{
+							"key": "state_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTM2ZTU0ZmI4ODE5MjgxNDVjZTVjMDllYzBhMTYwY2FlZDExNWViOWM4OTFhN2RkMzNjNWJiNDE0NjE2MWEwNDI0NTZiYjVlNDIxNWMxOTMiLCJpYXQiOjE2NjM5MjkzMzcsIm5iZiI6MTY2MzkyOTMzNywiZXhwIjoxNjk1NDY1MzM3LCJzdWIiOiI3MCIsInNjb3BlcyI6W119.MfQpSy9gwsys3c5ImIYciFmi6XyrGKwfxaAKoDjbNv1cd0Gdk4iFhpNNsRb8eeSr-9ZquYy-dVugOOeJoHNpKOpX480d_3Nv-wJpcBa9PfzkhLZPOqVn4XJTkrK8o-7LbBK6ztUWUsq80mwBivYFLBVYL-LlEF6u7FSG55satSxO7evA0XvT9_nkYHJbQo8kVDVa0PWG4O8K3UFYkObZosxYcvBEH4bCIjwmN86r1XXt1M0yNcfSa4-zPIr6Z8D_0_HaJPVlhmXtUf1lMmIHExnVekLO9W17dNmmG-XvWCs4FILN3dmuaE8ovJ_aEDpAfmf9T7HD1vFCyD4TPcMnzh_azaSOnDRkAFBwKkbD-gAfheg0cixxatCq06HHrcQRfI2zeY_SM5z5CnNNFQlcjtHAHF56Shvn7BZ-hmTxvA6-TbGCji4xAzNXFv-AbRpJIcn32qYXcJ0NxNMZWEuAOJFlNGVWb1uYEt3qNsTk5pTDZDyEbHTC35rQHhtza5qKEfrUje9QS79Xr8Jcbk5tRiMpvhgDlwJS8CzQnTyT7NWm2f4mx73dVVV5zIXS3MtpwpqGCi-riQvl6h9uLJqyfEuBk1PcdU007tk6sYASnvu5q8WcOnIsL4EdNOxPP1uJz7A7PSWqJ28hwJqx4ZN5wbyV0pS_FVbU3ybYlJIfmGo"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost/projects/medistory/public_html/api/v1",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "https://healthdetails.shreeaasthatraders.com/api/v1",
+			"type": "string"
+		}
+	]
+}
